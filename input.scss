@@ -1,0 +1,35 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: rgb(45, 58, 45);
+$nav-color: rgb(230, 236, 230);
+$body-bg: rgb(196, 189, 189);
+
+#articles {
+  font: 100% $font-stack;
+  color: $primary-color;
+  width: 1000px;
+  margin: auto;
+}
+
+.news {
+  box-sizing: border-box;
+  background: #7e7d7d;
+  padding: 25px;
+  margin: 30px;
+}
+
+
+#app .nav-link {
+ font-size: large;
+ text-decoration: none;
+ display: inline;
+ padding: 10px;
+ color: $nav-color;
+ &:hover,
+ &:focus {
+    color: rgb(17, 17, 19);
+ }
+}
+
+
+
+@import 'bootstrap/scss/bootstrap';
