@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+.openButton {
+  background: white;
+  margin-top: 50px;
+  margin-left: 100px;
+  border: solid 1px;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openButton:hover {
+  background: #fff5ef;
+  
+}
+
+.searchBar {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+}
+
+.searchBar-content {
+  position: relative;
+  top: 40px;
+  width: 50%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.searchBar .closeButton {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.searchBar .closeButton:hover {
+  color: #fff5ef;
+}
+
+.searchBar input[type=text] {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: #fff5ef;
+}
+
+.searchBar input[type=text]:hover {
+  background: white;
+}
+
+.searchBar button {
+  float: left;
+  width: 20%;
+  padding: 21px;
+  background: #ecc8b2;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.searchBar button:hover {
+  background: #fff5ef;
+}
+</style>
+
+<template>
+<div id="mySearchBar" class="searchBar">
+  <span class="closeButton" onclick="closeSearch()" title="Close SearchBar">×</span>
+  <div class="searchBar-content">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search products..." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<button class="openButton" onclick="openSearch()"><i class="fa fa-search"></i></button>
+    <h2>Search</h2>
+    </template>
+
+<script>
+function openSearch() {
+  document.getElementById("mySearchBar").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("mySearchBar").style.display = "none";
+}
+</script>
